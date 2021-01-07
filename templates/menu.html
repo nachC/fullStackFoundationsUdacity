@@ -1,0 +1,23 @@
+<html>
+
+<body>
+
+    <h1>{{restaurant.name}}</h1>
+
+    {% if items|length == 0 %}
+    <p>You currently have no menu items</p>
+    {% else %}
+
+    {% for i in items %}
+    <h2>{{i.name}}</h2>
+    <p>{{i.price}}</p>
+    <p>{{i.description}}</p>
+    <p>{{i.course}}</p>
+    {% endfor %}
+
+    {% endif %}
+
+    <a href="#">Create New Item</a>
+</body>
+
+</html>
